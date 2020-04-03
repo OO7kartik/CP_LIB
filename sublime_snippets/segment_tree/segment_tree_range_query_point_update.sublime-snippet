@@ -1,0 +1,78 @@
+<snippet>
+	<content><![CDATA[
+
+class SegmentTree {
+  vector<ll> st;
+  int n;
+
+  ll construct(ll a[], ll node, int ss, int se) {
+    if(ss==se) {
+      st[node]=a[ss];
+    }
+    else {
+      int mid=(se+ss)/2;
+      ll left=construct(a, 2*node+1, ss, mid);
+      ll right=construct(a, 2*node+2, mid+1, se);
+      //update this to desired associative funtion
+      st[node]=left+right; $2
+    }
+    return st[node];
+  }
+  
+  ll query_(ll node, int ss, int se, int qs, int qe) {
+    if(qs<=ss&&se<=qe) {
+      return st[node];
+    }
+    else if(se<qs||qe<ss) {
+      return 0;
+    }
+    int mid=(ss+se)/2;
+    ll left=query_(2*node+1, ss, mid, qs, qe);
+    ll right=query_(2*node+2, mid+1, se, qs, qe);
+    //return desired associative function
+    return left+right; $1
+  }
+
+  ll update_(ll node, int ss, int se, int pos, ll val) {
+    if(se<pos||ss>pos) {
+      return st[node];
+    }
+    else if(ss==pos&&se==pos) {
+      st[node]=val;
+    }
+    else {
+      int mid=(ss+se)/2;
+      ll left=update_(2*node+1, ss, mid, pos, val);
+      ll right=update_(2*node+2, mid+1, se, pos, val);
+      //update with desired associative funtion
+      st[node]=left+right; $0
+    }
+    return st[node];
+  }
+
+public:
+  SegmentTree(ll a[], int size) {
+    n=size;
+    st=vector<ll>(4*n, 0);
+    construct(a, 0, 0, n-1);
+  }
+
+  ll query(int qs, int qe) {
+    return query_(0, 0, n-1, qs, qe);
+  }
+
+  ll update(int pos, int val) {
+    return update_(0, 0, n-1, pos, val);
+  }
+
+  void print() {
+    debug(st);
+  }
+};
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>segmentTreeRQPU</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
