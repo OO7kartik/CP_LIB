@@ -1,0 +1,39 @@
+<snippet>
+	<content><![CDATA[
+class BinaryIndexedTree {
+  vector<ll> bt;
+  int n;
+
+public:
+  BinaryIndexedTree(ll a[], int size) {
+    n=size;
+    bt=vector<ll>(n+1);
+    for(int i=1; i<=n; i++) {
+      update(i, a[i-1]);
+    }
+  }
+
+  void update(int idx, int val) {
+    for(; idx<=n;idx+=idx&-idx) {
+      bt[idx]+=val;
+    }
+  }
+
+  ll query(int idx) {
+    ll res=0;
+    for(;idx>0; idx-=idx&-idx) {
+      res+=bt[idx];
+    }
+    return res;
+  }
+
+  void print() {
+    debug(bt);
+  }
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>binary_indexed_tree</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
