@@ -1,0 +1,102 @@
+{
+  "C_Cpp.updateChannel": "Insiders",
+  "editor.minimap.enabled": false,
+  "python.pythonPath": "C:\\Users\\ASUS\\Anaconda3",
+  "workbench.colorCustomizations": {},
+  "explorer.confirmDelete": false,
+  "[cpp]": {
+      "editor.tabSize": 2,
+      // "editor.semanticHighlighting.enabled": false
+  },
+  "[python]": {
+      "editor.wordBasedSuggestions": false,
+      "editor.tabSize": 4,
+  },
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "editor.fontWeight": "normal",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 13,
+  "kite.showWelcomeNotificationOnStartup": false,
+  "editor.mouseWheelScrollSensitivity": 3,
+  "files.exclude": {
+      "*.exe": true,
+      "**/.classpath": true,
+      "**/.project": true,
+      "**/.settings": true,
+      "**/.factorypath": true
+  },
+  "code-runner.executorMap": {
+      "cpp": "cd $dir && g++ -D ROHIT_SYS $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "workbench.editorAssociations": {
+      "*.ipynb": "jupyter-notebook"
+  },
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+
+
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.cursorStylePerMode.insert": "underline",
+  "vim.cursorStylePerMode.normal": "block-outline",
+  "vim.insertModeKeyBindings": [
+      {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+      }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+      },
+      {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+      }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false,
+      "<C-d>": false,
+      "<C-c>": false,
+      "<C-x>": false,
+      "<C-v>": false,
+      "<C-z>": false,
+      "<C-y>": false,
+      "<C-k>": false,
+      "<C-b>": false,
+      "<C-{>": false,
+      "<C-}>": false,
+      "<C-[>": false,
+      "<C-]>": false,
+      "<C-e>": false,
+  },
+  "window.menuBarVisibility": "compact",
+  "breadcrumbs.enabled": false,
+  "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+  },
+  "python.defaultInterpreterPath": "/bin/python3",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "tabnine.experimentalAutoImports": true,
+  "editor.cursorStyle": "underline",
+  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "[java]": {
+      "editor.fontSize": 16,
+      "editor.tabSize": 2,
+      "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "window.zoomLevel": 1,
+}
