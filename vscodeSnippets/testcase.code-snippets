@@ -1,0 +1,13 @@
+{
+    "TestCase": {
+    "prefix": "testcase",
+    "body": [
+      "int t;",
+      "cin >> t;",
+      "while(t--) {",
+      "  $0",
+      "}"
+    ],
+    "description": "TestCase"
+  }
+}
