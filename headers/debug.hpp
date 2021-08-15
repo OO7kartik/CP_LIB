@@ -1,10 +1,6 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-
-typedef long long ll;
-#define endl '\n'
 #define debug(var) cout << #var << ": ", cout << var << endl;
+#define debug2(var1, var2) cout << "["<< #var1 << ", " << #var2 << "]" << ": " << "["<< var1 << ", " << var2 << "]" << endl;
+#define debug3(var1, var2, var3) cout << "["<< #var1 << ", " << #var2 << ", " << #var3 << "]" << ": " << "["<< var1 << ", " << var2 << ", " << var3 << "]" << endl;
 
 template <typename T> ostream& operator<<(ostream& os, const vector<T>& v) { 
   os << "["; 
@@ -30,7 +26,7 @@ template <typename T> ostream& operator<<(ostream& os, const vector<vector<T>>& 
     os << "]]\n";
   } 
   return os; 
-} 
+}
 
 template <typename T> ostream& operator<<(ostream& os, const set<T>& v) { 
   os << "["; 
@@ -62,37 +58,3 @@ ostream& operator<<(ostream& os, const pair<T, S>& v) {
      << v.second << ")"; 
   return os; 
 } 
-  
-/*-----------------------------------------------*/
-//start custom functions
-
-
-
-//end custom functions
-/*-----------------------------------------------*/
- 
-int main() {
-  clock_t begin = clock();
- 
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
- 
-  #ifndef ONLINE_JUDGE
-  freopen("in.txt", "r", stdin);
-  freopen("out.txt", "w", stdout);
-  #endif
- 
-  /*-----------------------------------------------*/
-  //start
-  
-  
- 
-  //end
-  /*-----------------------------------------------*/
- 
-  clock_t end = clock();
-  #ifndef ONLINE_JUDGE
-    cerr << "Time elapsed: " << (double)clock() / CLOCKS_PER_SEC * 1000 << " ms.\n";
-  #endif
-  return 0;
-}
