@@ -1,2 +1,6 @@
 # CP_LIB
-Implementation of important Competitive programming DS and ALGO
+Contains
+  1. Vim config files
+  2. Vscode/sublime snippets
+  3. CP templates
+  4. implementation of Algos/DS
