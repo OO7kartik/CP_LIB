@@ -1,0 +1,13 @@
+vector<int> primeFactorization(int n) {
+  vector<int> factors;
+  int root=sqrt(n);
+  for(int d=2; d<=root; d++) {
+    while(n%d==0) {
+      factors.push_back(d);
+      n/=d;
+    }
+  }
+  if(n>1)
+    factors.push_back(n);
+  return factors;
+}
