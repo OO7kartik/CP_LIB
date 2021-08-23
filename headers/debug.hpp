@@ -52,6 +52,19 @@ ostream& operator<<(ostream& os, const map<T, S>& v) {
 } 
 
 template <typename T, typename S> 
+ostream& operator<<(ostream& os, const multimap<T, S>& v) { 
+  bool ok=false;
+  for (auto it : v)  {
+    if(ok) os << "    ";
+    os << it.first << " : " 
+       << it.second << endl;
+    ok=true; 
+  }
+  return os; 
+} 
+
+
+template <typename T, typename S> 
 ostream& operator<<(ostream& os, const pair<T, S>& v) { 
   os << "("; 
   os << v.first << ", " 
